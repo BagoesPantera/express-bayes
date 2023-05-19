@@ -87,15 +87,10 @@ class DataController {
     hasilTurun *= (turun/datas.length)
 
     if(hasilNaik >= hasilTurun){
-        console.log("Harga akan naik");
         res.status(200).json({"Result" : "Harga akan naik"});
     }else{
-        console.log("Harga akan turun");
         res.status(200).json({"Result" : "Harga akan turun"});
     }
-
-
-    console.log(naik, turun, varNaik, varTurun, hasilNaik, hasilTurun);
   }
 }
 
