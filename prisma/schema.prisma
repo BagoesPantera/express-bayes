@@ -1,0 +1,19 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:../db/dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Data {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  bahanPokok String
+  cuaca String
+  persediaan String
+  kendaraan String
+  prediksi String
+}
